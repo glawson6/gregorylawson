@@ -5,16 +5,16 @@ body {
     /*-moz-background-size: cover;*/
     /*-o-background-size: cover;*/
     background-size: cover;
-    /*color: #27987C; */
+    /*color: #27987C;*/
 
     font-family: Arial;
     font-size: small;
 }
 
 .dl-horizontal dt {
-    /*text-align: right;*/
+    text-align: left;
     /*margin-bottom: 1em;*/
-    width: 250px;
+    /*width: auto;*/
     padding-right: 1em;
 }
 
