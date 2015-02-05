@@ -3,6 +3,7 @@ require 'pdfkit'
 #require_relative './model/cookbook'
 
 CSS_DIR = File.dirname(__FILE__) + '/public/css'
+
 get '/resume' do
   puts CSS_DIR
   erb :resume_page

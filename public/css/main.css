@@ -22,3 +22,14 @@ body {
     margin-left: 0;
     margin-bottom: 1em;
 }
+
+.font-bold {
+    font-weight:bold;
+}
+
+.date-right{
+    text-align:right;
+}
+.tech-overview-table{
+    font-size: small;
+}
