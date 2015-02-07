@@ -1,107 +1,20 @@
 <section clas="container">
-   <div class="row">
-       <div class="col-lg-12">
-        <p>
-        GREGORY R. LAWSON<br>Telephone:  (770) 862-0112<br>Email: glawson6@yahoo.com<br>
-        </p>
-        </div>
-
-    </div>
-    <div class="row">
-        <br>OBJECTIVE<br>Pursuing a lead developer position requiring a motivated and dedicated individual whereby achievements and performance will be recognized and rewarded.
-    </div>
-    <div class="row">
-
-        <div class="col-md-12">
-        <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <div class="panel-heading">SUMMARY OF QUALIFICATIONS</div>
-            <!--div class="panel-body">
-                <p></p>
-            </div-->
-            <!-- List group -->
-            <ul class="list-group">
-                <li class="list-group-item">Over thirteen years of professional experience as a highly motivated Java developer/consultant, effective at multitasking and working under pressure to accomplish overall objectives.</li>
-                <li class="list-group-item">As a senior level developer, able to develop between front end and back end in any Java application.</li>
-                <li class="list-group-item">“Go to Guy” when a solution is needed. Able to analyze business needs and formulate creative design and technical approaches in both individual and team settings.</li>
-                <li class="list-group-item">Ability to dissect, understand, and utilize new and complex APIs for common business use cases.</li>
-                <li class="list-group-item">Ability to apply, implement complex APIs for use for lower level developers.</li>
-                <li class="list-group-item">Ability to learn new frameworks, design patterns, architecture and programming languages</li>
-                <li class="list-group-item">Ability to adapt to new and changing environments.</li>
-                <li class="list-group-item">Total Computer Science experience includes migration from Microsoft Windows environment to Linux based environment, while maintaining business objectives.</li>
-                <li class="list-group-item">TRUE Computer Scientist with knowledge in architecture, hardware, software for all computers science needs.</li>
-                <li class="list-group-item">Effectively relay and communicate new technologies to management and all related stakeholders.</li>
-                <li class="list-group-item">Develop precise solutions for every computer related issues in software development.</li>
-                <li class="list-group-item">Motivated team player who works diligently to ensure consistency and satisfaction of project requirements.</li>
-                <li class="list-group-item">Expansive knowledge and research capabilities to uncover latest technology developments to employ into solutions.</li>
-                <li class="list-group-item">Capable of excelling as an individual developer or within a small to large team development environments.</li>
-                <li class="list-group-item">Ability to coach, mentor and train less experienced team members.</li>
-                <li class="list-group-item">Effective communication skills to translate business requirements into actual implementation.</li>
-                <li class="list-group-item">Experience in building applications hosted in the cloud.</li>
-                <li class="list-group-item">Experience building SOA implementations including SOAP and RESTful based webservices.</li>
-            </ul>
-        </div>
-        </div>
-    </div>
+    <%= erb :resume_name_info %>
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <!-- Default panel contents -->
-                <div class="panel-heading  font-bold panel-title">TECHNOLOGY OVERVIEW</div>
-                <!--div class="panel-body">
-                </div-->
-
-                <table class="table table-bordered tech-overview-table">
-                    <tr>
-                        <th>Domain:</th>
-                        <th>Technologies Used:</th>
-                    </tr>
-                    <tr>
-                        <td>Programming Languages:</td>
-                        <td>Java, C, C++, HTML, SQL, XML, PL/SQL</td>
-                    </tr>
-                    <tr>
-                        <td>JAVA Enterprise Technologies:</td>
-                        <td>JDBC, JSP, Servlets, EJB 3.1, SWING, SOAP and RESTful, Web Services, JMS, JPA</td>
-                    </tr>
-                    <tr>
-                        <td>ORM Tools:</td>
-                        <td>Maven, Ant, Gradle</td>
-                    </tr>
-                    <tr>
-                        <td>Build Tools:</td>
-                        <td>Maven, Ant, Gradle</td>
-                    </tr>
-                    <tr>
-                        <td>Frameworks:</td>
-                        <td>Spring, Spring MVC, Struts, Grails, GWT, MVP</td>
-                    </tr>
-                    <tr>
-                        <td>Application Servers:</td>
-                        <td>JBOSS, Weblogic, Websphere, Tomcat</td>
-                    </tr>
-                    <tr>
-                        <td>Message Oriented Middleware:</td>
-                        <td>MQ Series, Sun One Message Queue, JBOSS MQ</td>
-                    </tr>
-                    <tr>
-                        <td>Databases:</td>
-                        <td>MSSQL Server, Oracle, DB2, DataFlex,MS Access, MySQL, Sybase, Postgresql, SQLite</td>
-                    </tr>
-                    <tr>
-                        <td>Operating Systems:</td>
-                        <td>Windows 2000, NT, XP,Vista, Linux, UNIX,MAC OS X</td>
-                    </tr>
-                    <tr>
-                        <td>SCM:</td>
-                        <td>CVS, Subversion, Visual Source Safe, ClearCase, Git</td>
-                    </tr>
-                </table>
+                <div class="panel-heading">
+                    <div class="row"><div class="col-md-12 font-bold panel-title">OBJECTIVE</div></div>
+                    <div class="row"><div class="col-md-12">Pursuing a lead developer position requiring a motivated and dedicated individual whereby achievements and performance will be recognized and rewarded.</div></div>
+                </div>
             </div>
         </div>
     </div>
+    <%= erb :summary_of_qualifications %>
+    <%= erb :technology_overview %>
     <div class="row text-center">
-    <h5>WORK EXPERIENCE</h5>
+    <h4 class=" font-bold">WORK EXPERIENCE</h4>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -391,35 +304,18 @@
        </div>
    </div>
     <div class="row">
+        <div class="col-md-12">
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading">EDUCATION</div>
+            <div class="panel-heading font-bold panel-title">EDUCATION</div>
             <div class="panel-body">
-                <p>
-                    <br>MS, Computer Science – Southern Polytechnic State University, Marietta, GA
-                    <br>BS, Electrical Engineering - Tuskegee University, Tuskegee, AL
-                    <br>Sun Certified Programmer for the JavaTM Platform
-
-                </p>
+                <p>MS, Computer Science – Southern Polytechnic State University, Marietta, GA</p>
+                <p>BS, Electrical Engineering - Tuskegee University, Tuskegee, AL</p>
+                <p>Sun Certified Programmer for the JavaTM Platform</p>
+                <p>Relevant Courses: EJB &amp; Weblogic, E-Commerce, Advanced Databases, Computer Architecture, Computer Networking</p>
+                <p>Relevant Projects from Coursework: Developed online auction site utilizing Struts 2, IBatis with Oracle database and Tomcat for Advanced Databases course. Developed stored procedures and triggers with PL/SQL. Developed online Veterinary Supply store with Groovy, Grails, and MySQL.</p>
             </div>
-
-            <!-- Table -->
-            <table class="table">
-            </table>
         </div>
-
+        </div>
     </div>
-   <div class="row">
-
-       <div class="col-md-12">
-      <br>EDUCATION
-
-       </div>
-   </div>
-   <div class="row">
-       <div class="col-md-12">
-      <br>Relevant Courses: EJB &amp; Weblogic, E-Commerce, Advanced Databases, Computer Architecture, Computer Networking
-      <br>Relevant Projects from Coursework: Developed online auction site utilizing Struts 2, IBatis with Oracle database and Tomcat for Advanced Databases course. Developed stored procedures and triggers with PL/SQL. Developed online Veterinary Supply store with Groovy, Grails, and MySQL.<br> <br><br>
-       </div>
-   </div>
 </section>

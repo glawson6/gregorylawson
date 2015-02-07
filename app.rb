@@ -4,9 +4,32 @@ require 'pdfkit'
 
 CSS_DIR = File.dirname(__FILE__) + '/public/css'
 
+OFFICE_COMMAND = ENV['SOFFICE_PATH']
+
 get '/resume' do
   puts CSS_DIR
+  puts OFFICE_COMMAND
   erb :resume_page
+end
+
+get '/2page' do
+  erb :resume_two_page, :layout => false
+end
+
+get '/2pagePDF' do
+  content_type 'application/pdf'
+  html = erb(:resume_two_page, :layout => false)
+  kit = PDFKit.new(html, :page_size => 'Letter',
+                   :margin_top => '0.25in',
+                   :margin_right => '0.25in',
+                   :margin_bottom => '0.25in',
+                   :margin_left => '0.25in',)
+  kit.stylesheets << CSS_DIR + '/bootstrap.min.css'
+  kit.stylesheets << CSS_DIR + '/main.css'
+  puts kit.command
+  stream do |out|
+    out << kit.to_pdf
+  end
 end
 
 get '/about' do
@@ -16,10 +39,14 @@ end
 
 get '/pdf' do
   content_type 'application/pdf'
-  html = erb(:resume_pdf,:layout => false)
+  html = erb(:resume_pdf, :layout => false)
   #render(:erb, template, options, locals, &block)
-  #kit = PDFKit.new(html, :page_size => 'Letter')
-  kit = PDFKit.new(html, {})
+  kit = PDFKit.new(html, :page_size => 'Letter',
+                   :margin_top => '0.25in',
+                   :margin_right => '0.25in',
+                   :margin_bottom => '0.25in',
+                   :margin_left => '0.25in',)
+  #kit = PDFKit.new(html, {})
   kit.stylesheets << CSS_DIR + '/bootstrap.min.css'
   kit.stylesheets << CSS_DIR + '/main.css'
   #send_file 'foo.png'
@@ -32,7 +59,7 @@ end
 
 get '/doc' do
   content_type 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-  html = erb(:resume_pdf,:layout => false)
+  html = erb(:resume_pdf, :layout => false)
   stream do |out|
     out << to_doc(html)
   end
@@ -40,9 +67,9 @@ end
 
 def to_doc(html)
   file_name = "tem.txt.html"
-  file = File.new(file_name,"wb+")
+  file = File.new(file_name, "wb+")
   file.puts(html)
-  commands = ["/opt/homebrew-cask/Caskroom/libreoffice/4.4.0/LibreOffice.app/Contents/MacOS/soffice",'--convert-to docx:"Office Open XML Text"',"doc"]
+  commands = [OFFICE_COMMAND, '--convert-to docx:"Office Open XML Text"', "doc"]
   commands << file_name
   commands << "--headless"
   invoke = commands.join(" ")
