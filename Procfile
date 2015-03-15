@@ -1,1 +1,1 @@
-web: bundle exec ruby app.rb -p 8051 -o 104.236.25.134 -e production
+web: bundle exec ruby app.rb -p 8051 -o 50.243.207.44 -e production
