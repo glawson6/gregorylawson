@@ -12,6 +12,19 @@ body {
     /*font-family: 'Trebuchet MS', Helvetica, sans-serif;*/
     font-size: small;
 }
+.jumbotron-text{
+    font-size: 80px;
+}
+.jumbotron-image {
+    border: 1px solid;
+    border-color: #080808;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.bk-gd{
+    background: url("../images/Storm_clouds.jpg") no-repeat center center fixed;
+    background-size: 1000px 1000px;
+}
 .text-top{
     font-family: 'Nothing You Could Do', cursive;
     font-style: oblique;
@@ -44,6 +57,19 @@ body {
     background-color: #0086b3; */
 }
 .resume-name-headline{
-
     font-size: 45px;
+}
+
+.about-me{
+    font-family: Arial;
+    /*font-family: 'Trebuchet MS', Helvetica, sans-serif;*/
+    font-size: small;
+}
+.p-indent {
+    text-indent: 50px;
+    font-size: large;
+    /*
+    margin-right: 10px;
+    margin-top: 5px;
+    */
 }
